@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin: ;
+background: #000 url(fon.jpg);
+font-family: 'Exo 2.0 ';
+}
+div{margin-left:17px;}
+h1{font-size:48px;
+color:white;}
+.blue{
+width: 415px;
+    height: 632px;	
+     margin: 46px;  /*расстояние между блоками  */
+	margin-left:90px;/*распределение блока по центру  */
+	margin-top:1px;
+	float: left;
+    background-color:white;
+	background:linear-gradient(135deg, transparent 35px, white 0);
+    border-radius: 90px 10px 10px 10px;
+	border:6px solid #1E90FF;  
+	text-align:center; 
+	font-size: 18px;}
+.pink{
+width: 415px;
+    height: 632px;	
+     margin: 46px;  /*расстояние между блоками  */
+	margin-left:90px;/*распределение блока по центру  */
+	margin-top:1px;
+	float: left;
+    background-color:white;
+	background:linear-gradient(135deg, transparent 35px, white 0);
+    border-radius: 90px 10px 10px 10px;
+	border:6px solid #FF69B6;  
+	text-align:center; 
+	font-size: 18px;
+}
+.img{
+position:absolute;
+left:200px;
+bottom:100px;
+ width:10px';
+}
+.p77{
+padding-top:155%;
+font-size: 21px;color:green;
+}
+#p87{
+padding-top:155%;
+font-size: 21px;color:green;
+}
+.cirk{position: absolute;
+width:115px;
+height:115px;
+background-color:lightblue;
+border-radius: 60px;
+margin: -180px 310px;
+}
+.sin{position: absolute;
+width:115px;
+height:115px;
+background-color:pink;
+border-radius: 60px;
+margin: -180px 310px;
+text-align: center; 
+color;green;
+}
+h2{position: absolute;
+font-size:38px;
+color:blue;
+text-align:center;}
+
+</style>
+<meta charset="UTF-8" />
+<script src="jquery-3.4.1.js"></script>	
+<script src="file:///D:/REACT/react.development.js"></script>
+<script src="file:///D:/REACT/react-dom.development.js"></script>
+<script src="file:///D:/REACT/babel.min.js"></script>
+</head>
+<body>
+<CENTER><h1>Ты сегодня кормил кота?</h1></CENTER>
+<div id="root">  </div>
+<div id="root1">  </div>
+<div id="root2">  </div>
+
+<script type="text/babel">
+class FirePlace extends React.Component {
+  constructor(props) {
+    super(props);
+    this.oF = this.oF.bind(this);
+    this.oS = this.oS.bind(this);
+    this.state = {iB: false}; 
+	}
+  oF() {
+    this.setState({iB: true});  }
+  oS() {
+    this.setState({iB: false});  }
+  render() {
+    const iB = this.state.iB;
+    let button = null;
+    if(iB){
+      button = <SB onClick={this.oS} /> 
+    } else {
+      button = <SF onClick={this.oF} />    }
+    return (
+      <div>
+ <h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
+  <img src="casvg.svg"  class="img" /> 		
+ <Indicator iB={iB} />
+		 {button}
+  
+</div> 
+    );  }}
+function SetFireMessage(props) { 
+  return <h3></h3>;}
+function SnuffOutMessage(props) {
+  return <h3></h3>;}
+function Indicator(props) {
+  const iB = props.iB;
+  if(iB){
+    return <SetFireMessage />;  }
+  return <SnuffOutMessage />;}
+function SF(props) {
+  return (
+  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
+  <p className="cirk" ><h2>0,5 кг </h2> </p>  </p></p>);
+  }
+function SB(props) {
+  return (
+  <p className="pink" onClick={props.onClick}>   <p className="p77">  Купил!<p className="sin" > </p></p></p>);
+  }
+ReactDOM.render(<FirePlace />,  document.getElementById('root'));
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/babel">
+class FirePlace extends React.Component {
+  constructor(props) {
+    super(props);
+    this.oF = this.oF.bind(this);
+    this.oS = this.oS.bind(this);
+    this.state = {iB: false}; 
+this.state = {imag: 'ca.jpg'};
+this.state = { isRed: true };
+	}
+  oF() {
+    this.setState({iB: true});  }
+  oS() {
+    this.setState({iB: false});  }
+  render() {
+  const isRed = this.state.isRed
+    const iB = this.state.iB;
+      const imag = this.state.imag;
+
+    let button = null;
+    if(iB){
+      button = <SB onClick={this.oS} /> 
+    } else {
+      button = <SF onClick={this.oF} />    }
+    return (
+      <div >
+        <Indicator iB={iB} />
+		 {button}
+		  <p>
+      		  </p>	
+<img src={imag} style={{ position: 'absolute',left: '250px', top:'500px', width:'200px' }} />
+<h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
+</div> 
+    );  }}
+function SetFireMessage(props) { 
+  return <h3></h3>;}
+function SnuffOutMessage(props) {
+  return <h3></h3>;}
+function Indicator(props) {
+  const iB = props.iB;
+  if(iB){
+    return <SetFireMessage />;  }
+  return <SnuffOutMessage />;}
+function SF(props) {
+  return (
+  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
+  <p className="cirk" > </p></p></p>);
+  }
+function SB(props) {
+  return (
+  <p className="pink" onClick={props.onClick}>  <p className="p77">   Купил!!!<p className="sin" ></p></p></p>);}
+ReactDOM.render(<FirePlace />,  document.getElementById('root1'));
+</script>
+
+<script type="text/babel">
+class FirePlace extends React.Component {
+  constructor(props) {
+    super(props);
+    this.oF = this.oF.bind(this);
+    this.oS = this.oS.bind(this);
+    this.state = {iB: false}; 
+this.state = {imag: 'ca.jpg'};
+this.state = { isRed: true };
+	}
+  oF() {
+    this.setState({iB: true});  }
+  oS() {
+    this.setState({iB: false});  }
+  render() {
+  const isRed = this.state.isRed
+    const iB = this.state.iB;
+      const imag = this.state.imag;
+
+    let button = null;
+    if(iB){
+      button = <SB onClick={this.oS} /> 
+    } else {
+      button = <SF onClick={this.oF} />    }
+    return (
+      <div >
+        <Indicator iB={iB} />
+		 {button}
+		  <p>
+      		  </p>	
+<img src={imag} style={{ position: 'absolute',left: '250px', top:'500px', width:'200px' }} />
+<h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
+</div> 
+    );  }}
+function SetFireMessage(props) { 
+  return <h3></h3>;}
+function SnuffOutMessage(props) {
+  return <h3></h3>;}
+function Indicator(props) {
+  const iB = props.iB;
+  if(iB){
+    return <SetFireMessage />;  }
+  return <SnuffOutMessage />;}
+function SF(props) {
+  return (
+  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
+  <p className="cirk" > </p></p></p>);
+  }
+function SB(props) {
+  return (
+  <p className="pink" onClick={props.onClick}>  <p className="p77">   Купил!!!<p className="sin" ></p></p></p>);}
+ReactDOM.render(<FirePlace />,  document.getElementById('root2'));
+</script>
+
+
+</script>
+</body>
+</html> 
