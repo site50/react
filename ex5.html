@@ -3,50 +3,106 @@
 <head>
 <style>
 body { margin: ;
-background: #000 url(https://user-images.githubusercontent.com/40818906/63688214-6a993180-c80f-11e9-8b3e-c16d2c9e8dcb.jpg);
-font-family: ;
+background: #000 url(foto/fon.jpg);
+font-family: 'Exo 2.0 ';
 }
 div{margin-left:17px;}
 h1{font-size:48px;
+margin-top:-10px;
 color:white;}
-.blue{
-width: 415px;
-    height: 632px;	
-     margin: 46px;  /*расстояние между блоками  */
-	margin-left:90px;/*распределение блока по центру  */
-	margin-top:1px;
-	float: left;
-    background-color:white;
-	background:linear-gradient(135deg, transparent 35px, white 0);
-    border-radius: 90px 10px 10px 10px;
-	border:6px solid #1E90FF;  
-	text-align:center; 
-	font-size: 18px;}
-.pink{
-width: 415px;
-    height: 632px;	
-     margin: 46px;  /*расстояние между блоками  */
-	margin-left:90px;/*распределение блока по центру  */
-	margin-top:1px;
-	float: left;
-    background-color:white;
-	background:linear-gradient(135deg, transparent 35px, white 0);
-    border-radius: 90px 10px 10px 10px;
-	border:6px solid #FF69B6;  
-	text-align:center; 
-	font-size: 18px;
+
+.img{position:absolute;
+height:278px;
+margin-left:11px;
+top:220px;
 }
-.img{
-position:absolute;
-left:200px;
-bottom:100px;
- width:10px;
+.bor { 
+  width: 280px;
+  height: 480px;
+  border: 4px solid lightblue;
+  border-left:none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left:50px;
+ background-color:yellow; 
 }
+.bor:after {
+  content: url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/casvg.svg );
+
+  height: calc(100% - 40px);      /*  длина*/
+  width: 40px;
+  transform: translate(-100%,-553px); /* до red*/
+  display: block;
+  border: 4px solid lightblue;
+  border-bottom-left-radius: 10px;
+  background: green;
+  border-right: none;
+  border-top: none;
+}
+.bor:before {
+  content: '';
+  height: 62px;
+  width: 62px;
+  transform: translate(-29.5px,9px)rotate(-45deg);
+  display: block;
+  border-top: 4px solid lightblue;
+  background: red;
+  top: 10;
+  
+  z-index:1;
+}
+
+
+.nev {
+  width: 280px;
+  height: 480px;
+  border: 4px solid pink;
+  border-left:none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: yellow;
+  margin-left:50px;
+  
+}
+.nev:after {
+  content: '';
+  height: calc(100% - 40px);      /*  длина*/
+  width: 40px;
+  transform: translate(-100%,-461px); /* до red*/
+  display: block;
+  border: 4px solid pink;
+  border-bottom-left-radius: 10px;
+  background: green;
+  border-right: none;
+  border-top: none;
+}
+.nev:before {
+  content: '';
+  height: 62px;
+  width: 62px;
+  transform: translate(-29.5px,9px)rotate(-45deg);
+  display: block;
+  border-top: 4px solid pink;
+  background: red;
+  top: 0;
+ 
+  z-index:1;
+}
+
+
 .p77{
 padding-top:155%;
 font-size: 21px;color:green;
 }
-#p87{
+.p78{
+padding-top:155%;
+font-size: 21px;color:green;
+}
+.p87{
+padding-top:155%;
+font-size: 21px;color:green;
+}
+.p88{
 padding-top:155%;
 font-size: 21px;color:green;
 }
@@ -71,19 +127,14 @@ font-size:38px;
 color:blue;
 text-align:center;}
 
-</style>
-<meta charset="UTF-8" />
-<script src="jquery-3.4.1.js"></script>	
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
+</style>
 </head>
-<body>
-<CENTER><h1>Ты сегодня кормил кота?</h1></CENTER>
-<div id="root">  </div>
-<div id="root1">  </div>
-<div id="root2">  </div>
+<script src="jquery-3.4.1.js"></script>	
+<script src="file:///D:/REACT/react.development.js"></script>
+<script src="file:///D:/REACT/react-dom.development.js"></script>
+<script src="file:///D:/REACT/babel.min.js"></script>
+<body><div id="root"> </div> 
 
 <script type="text/babel">
 class FirePlace extends React.Component {
@@ -106,8 +157,8 @@ class FirePlace extends React.Component {
       button = <SF onClick={this.oF} />    }
     return (
       <div>
- <h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
-  <img src="https://user-images.githubusercontent.com/40818906/63688035-e8107200-c80e-11e9-9aa2-d56e9d9ba272.jpg"  class="img" /> 		
+ <h1 style={{position: 'absolute',left: '200px', top:'300px', fontSize:30, color: "red"}}>Hello Style!</h1>
+  		
  <Indicator iB={iB} />
 		 {button}
   
@@ -124,133 +175,24 @@ function Indicator(props) {
   return <SnuffOutMessage />;}
 function SF(props) {
   return (
-  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
+  <p className="bor" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи!</u>
   <p className="cirk" ><h2>0,5 кг </h2> </p>  </p></p>);
   }
 function SB(props) {
   return (
-  <p className="pink" onClick={props.onClick}>   <p className="p77">  Купил!<p className="sin" > </p></p></p>);
+  <p className="nev" onClick={props.onClick}>   <p className="p78">  Купил!!!<p className="sin" ><h2>0,5 кг </h2> </p></p></p>);
   }
 ReactDOM.render(<FirePlace />,  document.getElementById('root'));
 </script>
 
 
-
-
-
-
-
-
-
-<script type="text/babel">
-class FirePlace extends React.Component {
-  constructor(props) {
-    super(props);
-    this.oF = this.oF.bind(this);
-    this.oS = this.oS.bind(this);
-    this.state = {iB: false}; 
-this.state = {imag: 'ca.jpg'};
-this.state = { isRed: true };
-	}
-  oF() {
-    this.setState({iB: true});  }
-  oS() {
-    this.setState({iB: false});  }
-  render() {
-  const isRed = this.state.isRed
-    const iB = this.state.iB;
-      const imag = this.state.imag;
-
-    let button = null;
-    if(iB){
-      button = <SB onClick={this.oS} /> 
-    } else {
-      button = <SF onClick={this.oF} />    }
-    return (
-      <div >
-        <Indicator iB={iB} />
-		 {button}
-		  <p>
-      		  </p>	
-<img src={imag} style={{ position: 'absolute',left: '250px', top:'500px', width:'200px' }} />
-<h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
-</div> 
-    );  }}
-function SetFireMessage(props) { 
-  return <h3></h3>;}
-function SnuffOutMessage(props) {
-  return <h3></h3>;}
-function Indicator(props) {
-  const iB = props.iB;
-  if(iB){
-    return <SetFireMessage />;  }
-  return <SnuffOutMessage />;}
-function SF(props) {
-  return (
-  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
-  <p className="cirk" > </p></p></p>);
-  }
-function SB(props) {
-  return (
-  <p className="pink" onClick={props.onClick}>  <p className="p77">   Купил!!!<p className="sin" ></p></p></p>);}
-ReactDOM.render(<FirePlace />,  document.getElementById('root1'));
-</script>
-
-<script type="text/babel">
-class FirePlace extends React.Component {
-  constructor(props) {
-    super(props);
-    this.oF = this.oF.bind(this);
-    this.oS = this.oS.bind(this);
-    this.state = {iB: false}; 
-this.state = {imag: 'ca.jpg'};
-this.state = { isRed: true };
-	}
-  oF() {
-    this.setState({iB: true});  }
-  oS() {
-    this.setState({iB: false});  }
-  render() {
-  const isRed = this.state.isRed
-    const iB = this.state.iB;
-      const imag = this.state.imag;
-
-    let button = null;
-    if(iB){
-      button = <SB onClick={this.oS} /> 
-    } else {
-      button = <SF onClick={this.oF} />    }
-    return (
-      <div >
-        <Indicator iB={iB} />
-		 {button}
-		  <p>
-      		  </p>	
-<img src={imag} style={{ position: 'absolute',left: '250px', top:'500px', width:'200px' }} />
-<h1 style={{position: 'absolute',left: '200px', top:'600px', fontSize:30, color: "red"}}>Hello Style!</h1>
-</div> 
-    );  }}
-function SetFireMessage(props) { 
-  return <h3></h3>;}
-function SnuffOutMessage(props) {
-  return <h3></h3>;}
-function Indicator(props) {
-  const iB = props.iB;
-  if(iB){
-    return <SetFireMessage />;  }
-  return <SnuffOutMessage />;}
-function SF(props) {
-  return (
-  <p className="blue" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи</u>
-  <p className="cirk" > </p></p></p>);
-  }
-function SB(props) {
-  return (
-  <p className="pink" onClick={props.onClick}>  <p className="p77">   Купил!!!<p className="sin" ></p></p></p>);}
-ReactDOM.render(<FirePlace />,  document.getElementById('root2'));
 </script>
 
 
-</script>
+
+
+
+
+
 </body>
 </html> 
