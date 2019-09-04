@@ -2,7 +2,7 @@
 {box-sizing: border-box;}
 body { 
 width:100%;
-background: #000 url(fon.jpg);
+background: #000 url(https://site50.github.io/react/img/fon.jpg);
 font-family: Arial;
 }
 div{margin-left:3%;
@@ -23,7 +23,7 @@ width: 100%;
  background-color:white; 
 }
 .blue:after {
-  content:  url(file:///D:/ЗАДАНИЕ/1/box/cirkbl.11.svg );
+  content:  url(https://site50.github.io/react/img/cirkbl.11.svg );
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-491px); /* до red*/
@@ -60,7 +60,7 @@ width: 100%;
  background-color:white; 
 }
 .pink:after {
-content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/cirkp.11.svg);
+content:  url(https://site50.github.io/react/img/cirkp.11.svg);
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-491px); /* до red*/
@@ -99,7 +99,7 @@ content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/cirkp.
  background-color:white; 
 }
 .kor:after {
-  content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/bl2.11.svg);
+  content:  url(https://site50.github.io/react/img/bl2.11.svg);
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-491px); /* до red*/
@@ -136,7 +136,7 @@ content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/cirkp.
   background-color:white;
 }
 .pon:after {
-content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/p2.11.svg);
+content:  url(https://site50.github.io/react/img/p2.11.svg);
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-505px); /* до red*/
@@ -173,7 +173,7 @@ content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/p2.11.
   background-color:white;
 }
 .five:after {
-content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/bl5.11.svg );
+content:  url(https://site50.github.io/react/img/bl5.11.svg );
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-491px); /* до red*/
@@ -210,7 +210,7 @@ content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/bl5.11
   background-color:white;
 }
 .trans:after {
-content:  url(file:///D:/%D0%97%D0%90%D0%94%D0%90%D0%9D%D0%98%D0%95/1/box/tr5.11.svg );
+content:  url(https://site50.github.io/react/img/tr5.11.svg );
   height: calc(100% - 41px);      /*  длина*/
   width: 40px;
   transform: translate(-100%,-491px); /* до red*/
