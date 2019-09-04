@@ -1,145 +1,74 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
+<html><meta charset="UTF-8">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body { width:100%;
-background: #000 url(https://site50.github.io/react/img/casvg.svg);
-font-family: Arial;
-}
-div{margin-left:17px;}
-h1{font-size:48px;
-margin-top:-10px;
-color:white;}
-
-.img{position:absolute;
-height:278px;
-margin-left:11px;
-top:220px;
-}
-.bor { 
-  width: 280px;
-  height: 480px;
-  border: 4px solid lightblue;
-  border-left:none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin-left:50px;
- background-color:yellow; 
-}
-.bor:after {
-  content:url(https://site50.github.io/react/img/casvg.svg);
-  height: calc(100% - 40px);     
-  width: 40px;
-  transform: translate(-100%,-553px); 
-  display: block;
-  border: 4px solid lightblue;
-  border-bottom-left-radius: 10px;
-  background: green;
-  border-right: none;
-  border-top: none;
-}
-.bor:before {
-  content: '';
-  height: 62px;
-  width: 62px;
-  transform: translate(-29.5px,9px)rotate(-45deg);
-  display: block;
-  border-top: 4px solid lightblue;
-  background: red;
-  top: 10;
-  z-index:1;
-}
-
-
-.nev {
-  width: 280px;
-  height: 480px;
-  border: 4px solid pink;
-  border-left:none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: yellow;
-  margin-left:50px;
-  
-}
-.nev:after {
-  content: '';
-  height: calc(100% - 40px);      /*  длина*/
-  width: 40px;
-  transform: translate(-100%,-461px); /* до red*/
-  display: block;
-  border: 4px solid pink;
-  border-bottom-left-radius: 10px;
-  background: green;
-  border-right: none;
-  border-top: none;
-}
-.nev:before {
-  content: '';
-  height: 62px;
-  width: 62px;
-  transform: translate(-29.5px,9px)rotate(-45deg);
-  display: block;
-  border-top: 4px solid pink;
-  background: red;
-  top: 0;
- 
-  z-index:1;
-}
-
-
-.p77{
-padding-top:155%;
-font-size: 21px;color:green;
-}
-.p78{
-padding-top:155%;
-font-size: 21px;color:green;
-}
-.p87{
-padding-top:155%;
-font-size: 21px;color:green;
-}
-.p88{
-padding-top:155%;
-font-size: 21px;color:green;
-}
-.cirk{position: absolute;
-width:115px;
-height:115px;
-background-color:lightblue;
-border-radius: 60px;
-margin: -180px 310px;
-}
-.sin{position: absolute;
-width:115px;
-height:115px;
-background-color:pink;
-border-radius: 60px;
-margin: -180px 310px;
-text-align: center; 
-color;green;
-}
-h2{position: absolute;
-font-size:38px;
-color:blue;
-text-align:center;}
-@media screen and (max-width: 1280px) { div.contentblock {width: 1200px;} }
-@media screen and (max-width: 1140px) { div.contentblock {width: 1024px;} }
-@media screen and (max-width: 992px) { div. contentblock {width: 970px;} }
-
-</style>
+<link rel='stylesheet' href='bx.css' type='text/css' media='all' />
 </head>
 <script src="jquery-3.4.1.js"></script>	
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<body><div id="root"> </div> 
-
+<body>
+<h2>Ты сегодня кормил кота?</h2>
+<div id="root"> </div> <div id="root1"> </div> <div id="root2"> </div> 
+<script type="text/babel">
+class FirePlace extends React.Component {
+  constructor(props) {
+    super(props);
+    this.oF = this.oF.bind(this);
+    this.oS = this.oS.bind(this);
+    this.state = {iB: false}; 
+	}
+  oF() {
+    this.setState({iB: true});  }
+  oS() {
+    this.setState({iB: false});  }
+  render() {
+    const iB = this.state.iB;
+    let button = null;
+    if(iB){
+      button = <SB1 onClick={this.oS} /> 
+    } else {
+      button = <SF1 onClick={this.oF} />    }
+    return (
+      <div>
+<Indicator iB={iB} />
+		 {button}
+</div> 
+    );  }}
+function SetFireMessage(props) { 
+  return <h3></h3>;}
+function SnuffOutMessage(props) {
+  return <h3></h3>;}
+function Indicator(props) {
+  const iB = props.iB;
+  if(iB){
+    return <SetFireMessage />;  }
+  return <SnuffOutMessage />;}
+function SF1(props) {
+  return (  
+<p className="blue" onClick={props.onClick}> 
+<p class="p3"  >Сказочное заморское яство</p>
+ <h1>Нямушка</h1> 
+   <p class="p4">с фуа-гра</p>
+   <p class="p5">10 порций</p>
+   <p class="p11" > мышь в подарок</p>
+  <p class="p1"> Чего сидишь? Порадуй котэ,  <u></u>
+ <u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF"}}> купи.</u></p>
+ </p>);
+  }
+function SB1(props) {
+  return (
+  <p className="pink" onClick={props.onClick}> 
+<p class="p3"  >Сказочное заморское яство</p>
+ <h1>Нямушка</h1> 
+   <p class="p4">с фуа-гра</p>
+   <p class="p5">10 порций</p>
+   <p class="p11" > мышь в подарок</p>
+  <p class="p1"> Печень утки разварная с артишоками.</p></p>);
+  }
+ReactDOM.render(<FirePlace />,  document.getElementById('root'));
+</script>
 <script type="text/babel">
 class FirePlace extends React.Component {
   constructor(props) {
@@ -161,11 +90,8 @@ class FirePlace extends React.Component {
       button = <SF onClick={this.oF} />    }
     return (
       <div>
- <h1 style={{position: 'absolute',left: '200px', top:'300px', fontSize:30, color: "red"}}>Hello Style!</h1>
-  		
  <Indicator iB={iB} />
 		 {button}
-  
 </div> 
     );  }}
 function SetFireMessage(props) { 
@@ -179,14 +105,87 @@ function Indicator(props) {
   return <SnuffOutMessage />;}
 function SF(props) {
   return (
-  <p className="bor" onClick={props.onClick}> <p className="p77"> Чего сидишь? Порадуй котэ,<u>купи!</u>
-  <p className="cirk" ><h2>0,5 кг </h2> </p>  </p></p>);
+  <p className="kor" onClick={props.onClick}>
+<p class="p3"  >Сказочное заморское яство</p>
+ <h1>Нямушка</h1> 
+   <p class="p4">с рыбой</p>
+   <p class="p5">10 порций</p>
+   <p class="p11" > мышь в подарок</p>
+  <p class="p1"> Чего сидишь? Порадуй котэ,  <u></u>
+ <u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF"}}> купи.</u></p>
+  </p>);
   }
 function SB(props) {
   return (
-  <p className="nev" onClick={props.onClick}>   <p className="p78">  Купил!!!<p className="sin" ><h2>0,5 кг </h2> </p></p></p>);
+  <p className="pon" onClick={props.onClick}>
+<p class="p3"  >Сказочное заморское яство</p>
+ <h1>Нямушка</h1> 
+   <p class="p4">с рыбой</p>
+   <p class="p5">10 порций</p>
+   <p class="p11" > мышь в подарок</p>
+  <p class="p13" > Головы щучьи с чесноком да свежайщая семгушка.</p>
+  </p>
+  );  }
+ReactDOM.render(<FirePlace />,  document.getElementById('root1'));
+</script>
+<script type="text/babel">
+class FirePlace extends React.Component {
+  constructor(props) {
+    super(props);
+    this.oF = this.oF.bind(this);
+    this.oS = this.oS.bind(this);
+    this.state = {iB: false}; 
+	}
+  oF() {
+    this.setState({iB: true});  }
+  oS() {
+    this.setState({iB: false});  }
+  render() {
+    const iB = this.state.iB;
+    let button = null;
+    if(iB){
+      button = <SB2 onClick={this.oS} /> 
+    } else {
+      button = <SF2 onClick={this.oF} />    }
+    return (
+      <div>
+ <Indicator iB={iB} />
+		 {button}
+</div> 
+    );  }}
+function SetFireMessage(props) { 
+  return <h3></h3>;}
+function SnuffOutMessage(props) {
+  return <h3></h3>;}
+function Indicator(props) {
+  const iB = props.iB;
+  if(iB){
+    return <SetFireMessage />;  }
+  return <SnuffOutMessage />;}
+function SF2(props) {
+  return (
+  <p className="five" onClick={props.onClick}>
+<p class="p3"  >Сказочное заморское яство</p>
+ <h1>Нямушка</h1> 
+   <p class="p4">с курой</p>
+   <p class="p5">10 порций</p>
+   <p class="p11" > мышь в подарок</p>
+  <p class="p1"> Чего сидишь? Порадуй котэ,  <u></u>
+ <u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF"}}> купи.</u></p>
+ </p>);
   }
-ReactDOM.render(<FirePlace />,  document.getElementById('root'));
+function SB2(props) {
+  return (
+  <p className="trans" onClick={props.onClick}> 
+<p class="p6"  >Сказочное заморское яство</p>
+ <h3>Нямушка</h3> 
+   <p class="p7">с курой</p>
+   <p class="p10">10 порций</p>
+   <p class="p12" > мышь в подарок</p>
+  <p class="p14" >Печалька, с курой закончился.</p>
+ </p>);
+  }
+ReactDOM.render(<FirePlace />,  document.getElementById('root2'));
 </script>
 </body>
 </html> 
