@@ -15,25 +15,26 @@
 class FirePlace extends React.Component {
   constructor(props) {
     super(props);
-    this.oF = this.oF.bind(this);
+	this.oF = this.oF.bind(this);
     this.oS = this.oS.bind(this);
     this.state = {iB: false}; 
 	}
   oF() {
-    this.setState({iB: true});  }
+   setTimeout(()=>{this.setState({iB: true})},500);}
   oS() {
-    this.setState({iB: false});  }
+    setTimeout(()=>this.setState({iB: false}),500);}
   render() {
     const iB = this.state.iB;
-    let button = null;
-    if(iB){
-      button = <SB1 onClick={this.oS} /> 
+    let onMouseLeave = null;
+   
+   if(iB){
+      onMouseLeave = <SB1 onMouseLeave={this.oS} /> 
     } else {
-      button = <SF1 onClick={this.oF} />    }
+      onMouseLeave = <SF1 onMouseLeave={this.oF} />    }
     return (
       <div>
 <Indicator iB={iB} />
-		 {button}
+		 {onMouseLeave}
 </div> 
     );  }}
 function SetFireMessage(props) { 
@@ -47,7 +48,7 @@ function Indicator(props) {
   return <SnuffOutMessage />;}
 function SF1(props) {
   return (  
-<p className="blue" onClick={props.onClick}> 
+<p className="blue" onMouseLeave={props.onMouseLeave}> 
 <p class="p3"  >Сказочное заморское яство</p>
  <h1>Нямушка</h1> 
    <p class="p4">с фуа-гра</p>
@@ -59,7 +60,7 @@ function SF1(props) {
   }
 function SB1(props) {
   return (
-  <p className="pink" onClick={props.onClick}> 
+  <p className="pink" onMouseLeave={props.onMouseLeave}> 
 <p class="p3"  >Сказочное заморское яство</p>
  <h1>Нямушка</h1> 
    <p class="p4">с фуа-гра</p>
@@ -78,20 +79,20 @@ class FirePlace extends React.Component {
     this.state = {iB: false}; 
 	}
   oF() {
-    this.setState({iB: true});  }
+     setTimeout(()=>this.setState({iB: true}),500);}
   oS() {
-    this.setState({iB: false});  }
+     setTimeout(()=>this.setState({iB: false}),500);}
   render() {
     const iB = this.state.iB;
-    let button = null;
+    let onMouseLeave = null;
     if(iB){
-      button = <SB onClick={this.oS} /> 
+      onMouseLeave = <SB onMouseLeave={this.oS} /> 
     } else {
-      button = <SF onClick={this.oF} />    }
+      onMouseLeave = <SF onMouseLeave={this.oF} />    }
     return (
       <div>
  <Indicator iB={iB} />
-		 {button}
+		 {onMouseLeave}
 </div> 
     );  }}
 function SetFireMessage(props) { 
@@ -105,7 +106,7 @@ function Indicator(props) {
   return <SnuffOutMessage />;}
 function SF(props) {
   return (
-  <p className="kor" onClick={props.onClick}>
+  <p className="kor" onMouseLeave={props.onMouseLeave}>
 <p class="p3"  >Сказочное заморское яство</p>
  <h1>Нямушка</h1> 
    <p class="p4">с рыбой</p>
@@ -117,7 +118,7 @@ function SF(props) {
   }
 function SB(props) {
   return (
-  <p className="pon" onClick={props.onClick}>
+  <p className="pon" onMouseLeave={props.onMouseLeave}>
 <p class="p3"  >Сказочное заморское яство</p>
  <h1>Нямушка</h1> 
    <p class="p4">с рыбой</p>
@@ -137,20 +138,20 @@ class FirePlace extends React.Component {
     this.state = {iB: false}; 
 	}
   oF() {
-    this.setState({iB: true});  }
+     setTimeout(()=>this.setState({iB: true}),500);}
   oS() {
-    this.setState({iB: false});  }
+    setTimeout(()=> this.setState({iB: false}),500);}
   render() {
     const iB = this.state.iB;
-    let button = null;
+    let onMouseLeave = null;
     if(iB){
-      button = <SB2 onClick={this.oS} /> 
+      onMouseLeave = <SB2 onMouseLeave={this.oS} /> 
     } else {
-      button = <SF2 onClick={this.oF} />    }
+      onMouseLeave = <SF2 onMouseLeave={this.oF} />    }
     return (
       <div>
  <Indicator iB={iB} />
-		 {button}
+		 {onMouseLeave}
 </div> 
     );  }}
 function SetFireMessage(props) { 
@@ -164,7 +165,7 @@ function Indicator(props) {
   return <SnuffOutMessage />;}
 function SF2(props) {
   return (
-  <p className="five" onClick={props.onClick}>
+  <p className="five" onMouseLeave={props.onMouseLeave}>
 <p class="p3"  >Сказочное заморское яство</p>
  <h1>Нямушка</h1> 
    <p class="p4">с курой</p>
@@ -176,7 +177,7 @@ function SF2(props) {
   }
 function SB2(props) {
   return (
-  <p className="trans" onClick={props.onClick}> 
+  <p className="trans" onMouseLeave={props.onMouseLeave}> 
 <p class="p6"  >Сказочное заморское яство</p>
  <h3>Нямушка</h3> 
    <p class="p7">с курой</p>
