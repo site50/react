@@ -9,226 +9,102 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <body>
-<h1> Did you feed the cat today?<h1>
-<div id="root"> </div>
-<div id="root1"> </div>
-<div id="root2"> </div>
+<div id="root">
+</div>
 <script type="text/babel">
-const imag = "https://site50.github.io/react/img/cat1.jpg";
-const text1 = "Fabulous delicacy";
-const text2 = "Tasty";
-const text3 = "with the foie gras";
-const text4 = "10 servings";
-const text5 = "free gift toy";
+	const Box = {
+	b: <div class="blue"></div>,s: <div class="blue"></div>};
+	const Boxtwo = {
+	b: <div class="silv"></div>, s: <div class="pink"></div>};
+	const Line = {
+	l: <div class="d19"></div>,n: <div class="d19"></div>};
+	const Linetwo = {
+	l: <div class="d20"></div>, n: <div class="d21"></div>};
+	const Ring = {
+	m: <div class="cirk"></div>,e: <div class="cirk"></div>};
+	const Ringtwo = {
+	m: <div class="csi"></div>, e: <div class="sin"></div>};
+	const Names = {
+	c: 'with the foie gras',
+	f: 'with the fish',
+	d: 'with the chicken'
+	};
+	const Happy = {
+	z: 'Your cat will be happy!',
+	x: 'Unfortunately, the chicken ended.'
+	};
+	const imag = {k:"img/cat1.jpg",c:"img/cat1.jpg",  };
+	const imagik = {k:"img/cat3.jpg",c:"img/cat1.jpg", };
+	const text1 = "Fabulous delicacy";
+	const text2 = "Tasty";
+	const text4 = "10 servings";
+	const text5 = "free gift toy";
 
-class FirePlace extends React.Component {
-constructor(props) {
-super(props);
-this.oF = this.oF.bind(this);
-this.oS = this.oS.bind(this);
-this.state = {iB: false}; 
-}
-oF() {
-setTimeout(()=>{this.setState({iB: true})},700);}
-oS() {
-setTimeout(()=>this.setState({iB: false}),700);}
+class App extends React.Component {
+state = {shown: true,};
 render() {
-const iB = this.state.iB;
-let button = null;
-if(iB){
-button = <SB onMouseLeave={this.oS} /> 
-} else {
-button = <SF onMouseLeave={this.oF} />    }
+const ring = this.props.ring;
+const scale = this.props.scale;
+const img = this.props.img;
+const kyb = this.props.kyb;
+const line = this.props.line;
+const answer = this.props.answer;
 return (
 <div>
-<Indicator iB={iB} />
-{button}
-</div> 
-);  }}
-function SetFireMessage(props) { 
-return <h3></h3>;}
-function SnuffOutMessage(props) {
-return <h3></h3>;}
-function Indicator(props) {
-const iB = props.iB;
-if(iB){
-return <SetFireMessage />;  }
-return <SnuffOutMessage />;}
-function SF(props) {
-return (
-<p className="blue" onMouseLeave={props.onMouseLeave}> 
-<p class="p2">{text1}</p>
-<p class="p3"> {text2}  </p>
-<p class="p4"> {text3}  </p>
-<p class="p5"> {text4}  </p>
-<p class="p6"> {text5}  </p>
-<img src={imag} />
-<p className="p9"> Make the cat happy ,<u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF" }} > buy for a cat!</u>
-<p className="cirk" ><p class="p7">0,5 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d19" ></p></p>
-);
-}
-function SB(props) { 
-return (
-<p className="pink" onMouseLeave={props.onMouseLeave}>   
-<p class="p2">{text1}</p>
-<p class="p3"> {text2}  </p>
-<p class="p4"> {text3}  </p>
-<p class="p5"> {text4}  </p>
-<p class="p6"> {text5}  </p>
-<img src={imag} />
-<p className="p9" >With the foie gras<p className="sin" ><p class="p7">0,5 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d20" ></p></p>
-);
-}
-ReactDOM.render(<FirePlace />,  document.getElementById('root'));
-</script>
+<h2>{this.state.shown ?
+<p type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
+<div >{Box[kyb]}
+<img src={imag[img]}    class="imad"/>
+<p class="p31">{text1}</p>
+<p class="p32"> {text2}  </p>
+<p class="p33">{Names[scale]}</p>
+<p class="p34"> {text4}  </p>
+<p class="p35"> {text5}  </p>
 
-  <script type="text/babel">
-const imag = "https://site50.github.io/react/img/cat1.jpg";
-const text6 = "Fabulous delicacy";
-const text7 = "Tasty";
-const text8 = "with delicious fish";
-const text9 = "10 servings";
-const text10 = "free gift toy";
-class FirePlace extends React.Component {
-constructor(props) {
-super(props);
-this.oF = this.oF.bind(this);
-this.oS = this.oS.bind(this);
-this.state = {iB: false}; 
-}
-oF() {
-setTimeout(()=>{this.setState({iB: true})},700);}
-oS() {
-setTimeout(()=>this.setState({iB: false}),700);}
-render() {
-const iB = this.state.iB;
-let button = null;
-if(iB){
-button = <SB1 onMouseLeave={this.oS} /> 
-} else {
-button = <SF1 onMouseLeave={this.oF} />    }
-return (
-<div>
-<Indicator iB={iB} />
-{button}
-</div> 
-);  }}
-function SetFireMessage(props) { 
-return <h3></h3>;}
-function SnuffOutMessage(props) {
-return <h3></h3>;}
-function Indicator(props) {
-const iB = props.iB;
-if(iB){
-return <SetFireMessage />;  }
-return <SnuffOutMessage />;}
-function SF1(props) {
-return (
-<p className="blue" onMouseLeave={props.onMouseLeave}> 
-<p class="p2">{text6}</p>
-<p class="p3"> {text7}  </p>
-<p class="p4"> {text8}  </p>
-<p class="p5"> {text9}  </p>
-<p class="p6"> {text10}  </p>
-<img src={imag} />
-<p className="p9"> Make the cat happy,<u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF"}} > buy for a cat!</u>
-<p className="cirk" ><p class="p7">2 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d19" ></p></p>
-);
-}
-function SB1(props) {
-return (
-<p className="pink" onMouseLeave={props.onMouseLeave}>  
-<p class="p2">{text6}</p>
-<p class="p3"> {text7}  </p>
-<p class="p4"> {text8}  </p>
-<p class="p5"> {text9}  </p>
-<p class="p6"> {text10}  </p>
-<img src={imag} />
-<p className="p9"> With delicious fish<p className="sin1" ><p class="p7">2 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d20" ></p></p>
-);
-}
-ReactDOM.render(<FirePlace />,  document.getElementById('root1'));
-</script>
+<p className="p36"> Make the cat happy ,<u style={{left: '11%', top:'56%', fontSize:17, color: "#1E90FF" }} >
+buy for a cat!</u>
+<div>{Ring[ring]}<p class="p37">0,5 <p class="p38">kg </p> </p> </div>
 
-  <script type="text/babel">
-const imag = "https://site50.github.io/react/img/cat1.jpg";
-const imag1 = "https://site50.github.io/react/img/cat3.jpg";
-const text11 = "Fabulous delicacy";
-const text12 = "Tasty";
-const text13 = "with chicken";
-const text14 = "10 servings";
-const text15 = "free gift toy";
-class FirePlace extends React.Component {
-constructor(props) {
-super(props);
-this.oF = this.oF.bind(this);
-this.oS = this.oS.bind(this);
-this.state = {iB: false}; 
+</p>
+<div>{Line[line]}</div>
+</div>
+</p>
+:
+<p type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
+<div>{Boxtwo[kyb]}
+<div class="imad"><img src={imagik[img]}    /></div>
+<p class="p31">{text1}</p>
+<p class="p32"> {text2}  </p>
+<p class="p33">{Names[scale]}</p>
+<p class="p34"> {text4}  </p>
+<p class="p35"> {text5}  </p>
+
+<p className="p36"> {Happy[answer]}
+<div>{Ringtwo[ring]}<p class="p37">0,5 <p class="p38">kg </p> </p> </div>
+</p>
+<div>{Linetwo[line]}</div>
+</div>
+</p>
 }
-oF() {
-setTimeout(()=>{this.setState({iB: true})},700);}
-oS() {
-setTimeout(()=>this.setState({iB: false}),700);}
-render() {
-const iB = this.state.iB;
-let button = null;
-if(iB){
-button = <SB2 onMouseLeave={this.oS} /> 
-} else {
-button = <SF2 onMouseLeave={this.oF} />    }
-return (
-<div>
-<Indicator iB={iB} />
-{button}
-</div> 
-);  }}
-function SetFireMessage(props) { 
-return <h3></h3>;}
-function SnuffOutMessage(props) {
-return <h3></h3>;}
-function Indicator(props) {
-const iB = props.iB;
-if(iB){
-return <SetFireMessage />;  }
-return <SnuffOutMessage />;}
-function SF2(props) {
-return (
-<p className="blue" onMouseLeave={props.onMouseLeave}> 
-<p class="p2">{text11}</p>
-<p class="p3"> {text12}  </p>
-<p class="p4"> {text13}  </p>
-<p class="p5"> {text14}  </p>
-<p class="p6"> {text15}  </p>
-<img src={imag} />
-<p className="p9"> Make the cat happy, <u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF"}}> buy for a cat!</u>
-<p className="cirk" ><p class="p7">5 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d19" ></p></p>
+</h2>
+</div>
+)
+}
+}
+	function Add() {
+	return (
+	<div>
+	<center><h2 ><i>Did you feed the cat today?</i></h2></center>
+	<table><tr>
+	<td><div class="asd"><center><App kyb="s" line="l" ring="e" scale="c" answer="z" img="c"/></center></div> </td>
+	<td><div class="asd"><center><App kyb="s" line="l" ring="e" scale="f" answer="z" img="c"/></center></div> </td>
+	<td><div class="asd"><center><App kyb="b" line="n"  ring="m" scale="d" answer="x" img="k"/> </center></div> </td>
+	</tr>
+	</table>
+</div>
 );
 }
-function SB2(props) {
-return (
-<p className="silv" onMouseLeave={props.onMouseLeave}>  
-<p class="p10">{text11}</p>
-<p class="p11"> {text12}  </p>
-<p class="p12"> {text13}  </p>
-<p class="p13"> {text14}  </p>
-<p class="p14"> {text15}  </p>
-<img src={imag1} class="img1"/>
-<p className="p9"> Sadly, the chicken is over<p className="csi" ><p class="p7">5 <p class="p8">kg </p> </p> 
-</p></p>
-<p class="d21" ></p></p>
-);
-}
-ReactDOM.render(<FirePlace />,  document.getElementById('root2'));
+ReactDOM.render(<Add />,  document.getElementById('root'));
 </script>
 </body>
-</html> 
+</html>
