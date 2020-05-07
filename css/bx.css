@@ -225,8 +225,8 @@ border-radius: 50px;
 left: 9rem;
 margin: -9.5rem 0rem 2rem 1.5rem;
 }
-@media (min-width: 412px) {
-.asd {    width: 27rem;
+@media (min-width: 375px) {
+.asd {    width: 17rem;
 }}
 @media (max-width: 667px) {/*  dont work!!!*/
 .asd {    width: 27rem;
