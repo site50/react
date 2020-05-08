@@ -13,17 +13,17 @@
 </div>
 <script type="text/babel">
 	const Box = {
-	b: <div class="blue"></div>,s: <div class="blue"></div>};
+	b: <div className="blue"></div>,s: <div className="blue"></div>};
 	const Boxtwo = {
-	b: <div class="silv"></div>, s: <div class="pink"></div>};
+	b: <div className="pink"></div>, s: <div className="silv"></div>};
 	const Line = {
-	l: <div class="d19"></div>,n: <div class="d19"></div>};
+	l: <div className="d19"></div>,n: <div className="d19"></div>};
 	const Linetwo = {
-	l: <div class="d20"></div>, n: <div class="d21"></div>};
+	l: <div className="d20"></div>, n: <div className="d21"></div>};
 	const Ring = {
-	m: <div class="cirk"></div>,e: <div class="cirk"></div>};
+	m: <div className="cirk"></div>,e: <div className="cirk"></div>};
 	const Ringtwo = {
-	m: <div class="csi"></div>, e: <div class="sin"></div>};
+	m: <div className="csi"></div>, e: <div className="sin"></div>};
 	const Names = {
 	c: 'with the foie gras',
 	f: 'with the fish',
@@ -52,39 +52,39 @@ const answer = this.props.answer;
 return (
 <div>
 <h2>{this.state.shown ?
-<p type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
+<div  className="buttom" onClick={() => this.setState({ shown: !this.state.shown })}>
 <div >{Box[kyb]}
-<img src={imag[img]}    class="imad"/>
-<p class="p31">{text1}</p>
-<p class="p32"> {text2}  </p>
-<p class="p33">{Names[scale]}</p>
-<p class="p34"> {text4}  </p>
-<p class="p35"> {text5}  </p>
+<img src={imag[img]}    className="imad"/>
+<div className="p310">{text1}</div>
+<div className="p320"> {text2}  </div>
+<div className="p330">{Names[scale]}</div>
+<div className="p340"> {text4}  </div>
+<div className="p350"> {text5}  </div>
 
-<p className="p36"> Make the cat happy ,<u style={{left: '11%', top:'56%', fontSize:17, color: "#1E90FF" }} >
+<div className="p360"> Make the cat happy ,<u style={{left: '11%', top:'56%', fontSize:17, color: "#1E90FF" }} >
 buy for a cat!</u>
-<div>{Ring[ring]}<p class="p37">0,5 <p class="p38">kg </p> </p> </div>
+<div>{Ring[ring]}<div className="p370">0,5 <div className="p380">kg </div> </div> </div>
 
-</p>
+</div>
 <div>{Line[line]}</div>
 </div>
-</p>
+</div>
 :
-<p type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
-<div>{Boxtwo[kyb]}
-<div class="imad"><img src={imagik[img]}    /></div>
-<p class="p31">{text1}</p>
-<p class="p32"> {text2}  </p>
-<p class="p33">{Names[scale]}</p>
-<p class="p34"> {text4}  </p>
-<p class="p35"> {text5}  </p>
+<div type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
+<div >{Boxtwo[kyb]}
+<img src={imagik[img]}   className="imad" />
+<div className="p310">{text1}</div>
+<div className="p320"> {text2}  </div>
+<div className="p330">{Names[scale]}</div>
+<div className="p340"> {text4}  </div>
+<div className="p350"> {text5}  </div>
 
-<p className="p36"> {Happy[answer]}
-<div>{Ringtwo[ring]}<p class="p37">0,5 <p class="p38">kg </p> </p> </div>
-</p>
+<div className="p360"> {Happy[answer]}
+<div >{Ringtwo[ring]}<div className="p370">0,5 <div className="p380">kg </div> </div> </div>
+</div>
 <div>{Linetwo[line]}</div>
 </div>
-</p>
+</div>
 }
 </h2>
 </div>
@@ -94,12 +94,13 @@ buy for a cat!</u>
 	function Add() {
 	return (
 	<div>
-	<center><h2 ><i>Did you feed the cat today?</i></h2></center>
-	<table><tr>
-	<td><div class="asd"><center><App kyb="s" line="l" ring="e" scale="c" answer="z" img="c"/></center></div> </td>
-	<td><div class="asd"><center><App kyb="s" line="l" ring="e" scale="f" answer="z" img="c"/></center></div> </td>
-	<td><div class="asd"><center><App kyb="b" line="n"  ring="m" scale="d" answer="x" img="k"/> </center></div> </td>
-	</tr>
+	<center><h1 ><i>Did you feed the cat today?</i></h1></center><br></br>
+	<table><tbody><tr>
+	<td><div className="asd"><center><App kyb="b" line="l" ring="e" scale="c" answer="z" img="c"/>1</center></div> </td>
+	<td><div className="asd"><center><App kyb="b" line="l" ring="e" scale="f" answer="z" img="c"/>2</center></div> </td>
+
+	<td><div className="asd"><center><App kyb="s" line="n"  ring="m" scale="d" answer="x" img="k"/>3 </center></div> </td>
+	</tr></tbody>
 	</table>
 </div>
 );
