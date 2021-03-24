@@ -12,99 +12,19 @@
 <div id="root">
 </div>
 <script type="text/babel">
-	const Box = {
-	b: <div className="blue"></div>,s: <div className="blue"></div>};
-	const Boxtwo = {
-	b: <div className="pink"></div>, s: <div className="silv"></div>};
-	const Line = {
-	l: <div className="d19"></div>,n: <div className="d19"></div>};
-	const Linetwo = {
-	l: <div className="d20"></div>, n: <div className="d21"></div>};
-	const Ring = {
-	m: <div className="cirk"></div>,e: <div className="cirk"></div>};
-	const Ringtwo = {
-	m: <div className="csi"></div>, e: <div className="sin"></div>};
-	const Names = {
-	c: 'with the foie gras',
-	f: 'with the fish',
-	d: 'with the chicken'
-	};
-	const Happy = {
-	z: 'Your cat will be happy!',
-	x: 'Unfortunately, the chicken ended.'
-	};
-	const imag = {k:"img/cat1.jpg",c:"img/cat1.jpg",  };
-	const imagik = {k:"img/cat3.jpg",c:"img/cat1.jpg", };
-	const text1 = "Fabulous delicacy";
-	const text2 = "Tasty";
-	const text4 = "10 servings";
-	const text5 = "free gift toy";
-
+	
 class App extends React.Component {
-state = {shown: true,};
-render() {
-const ring = this.props.ring;
-const scale = this.props.scale;
-const img = this.props.img;
-const kyb = this.props.kyb;
-const line = this.props.line;
-const answer = this.props.answer;
+
 return (
 <div>
-<h2>{this.state.shown ?
-<div  className="buttom" onClick={() => this.setState({ shown: !this.state.shown })}>
-<div >{Box[kyb]}
-<img src={imag[img]}    className="imad"/>
-<div className="p310">{text1}</div>
-<div className="p320"> {text2}  </div>
-<div className="p330">{Names[scale]}</div>
-<div className="p340"> {text4}  </div>
-<div className="p350"> {text5}  </div>
+<h2>HELLO</h2>
+</div>
 
-<div className="p360"> Make the cat happy ,<u style={{left: '11%', top:'56%', fontSize:17, color: "#1E90FF" }} >
-buy for a cat!</u>
-<div>{Ring[ring]}<div className="p370">0,5 <div className="p380">kg </div> </div> </div>
-
-</div>
-<div>{Line[line]}</div>
-</div>
-</div>
-:
-<div type="button"  onClick={() => this.setState({ shown: !this.state.shown })}>
-<div >{Boxtwo[kyb]}
-<img src={imagik[img]}   className="imad" />
-<div className="p310">{text1}</div>
-<div className="p320"> {text2}  </div>
-<div className="p330">{Names[scale]}</div>
-<div className="p340"> {text4}  </div>
-<div className="p350"> {text5}  </div>
-
-<div className="p360"> {Happy[answer]}
-<div >{Ringtwo[ring]}<div className="p370">0,5 <div className="p380">kg </div> </div> </div>
-</div>
-<div>{Linetwo[line]}</div>
-</div>
-</div>
-}
-</h2>
-</div>
 )
 }
-}
-	function Add() {
-	return (
-	<div>
-	<center><h1 ><i>Did you feed the cat today?</i></h1></center><br></br>
-	<table><tbody><tr>
-	<td><div className="asd"><center><App kyb="b" line="l" ring="e" scale="c" answer="z" img="c"/>1</center></div> </td>
-	<td><div className="asd"><center><App kyb="b" line="l" ring="e" scale="f" answer="z" img="c"/>2</center></div> </td>
 
-	<td><div className="asd"><center><App kyb="s" line="n"  ring="m" scale="d" answer="x" img="k"/>3 </center></div> </td>
-	</tr></tbody>
-	</table>
-</div>
-);
-}
+	
+
 ReactDOM.render(<Add />,  document.getElementById('root'));
 </script>
 </body>
