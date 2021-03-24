@@ -13,11 +13,12 @@
 </div>
 <script type="text/babel">
 	
-class App extends React.Component {
-  render() {
-  const style_href={
-	background-image: './beach.jpg',
-          backgroundSize: "cover",
+    class App extends React.Component {
+        render() {
+const style_href={
+
+         backgroundImage: "url(" + "https://cdn.glitch.com/8b2dca23-124c-48fe-ba27-6411f2be17a7%2Fbeach.jpg?v=1616591992653" + ")",
+        backgroundSize: "cover",
        	fontSize: "10vw",
 		fontWeight: "1000",
 		zIndex: "0",
@@ -27,12 +28,16 @@ class App extends React.Component {
 		WebkitTextFillColor: "transparent",
 		
 }
-    return <div id='showtext'>
+      
+          return <div id='showtext'>
 
-<a  className="box" style={style_href}	href="menu.html"> 5 YOUR <br></br> ENGLISH</a>
+<a  className="box" style={style_href}	href="menu.html"> YOUR <br></br> ENGLISH</a>
+<Example/>
 </div>
-  }
-}
+        }
+      }
+
+
 
 
 	
