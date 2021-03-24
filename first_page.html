@@ -15,10 +15,25 @@
 	
 class App extends React.Component {
   render() {
-    return <h2>Hello App!</h2>;
+   const style_href={
+	background-image: './beach.jpg',
+          backgroundSize: "cover",
+       	fontSize: "10vw",
+		fontWeight: "1000",
+		zIndex: "0",
+		MozBackgroundClip: "text",
+		MozTextFillColor: "transparent",
+		WebkitBackgroundClip: "text",
+		WebkitTextFillColor: "transparent",
+		
+}
+    return <div id='showtext'>
+
+<a  className="box" style={style_href}	href="menu.html"> YOUR <br></br> ENGLISH</a>
+</div>
+	
   }
 }
-
 
 	
 
