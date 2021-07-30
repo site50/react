@@ -12,7 +12,26 @@
 <div id="root">
 </div>
 <script type="text/babel">
-	
+	class App2 extends React.Component {
+render() {
+return <div id='showtext'><a  className="box" 	href="menu.html"> YOUR <br></br> ENGLISH</a></div>;
+}
+}
+class App extends React.Component {
+constructor(){
+super();
+this.state={text1:true}
+}
+cHange(){
+setTimeout(() => {this.setState({text1:!this.state.text1})},500)
+}
+render() {
+return<div >
+<App2/>
+<h5><a href="menu.html" onMouseLeave={this.cHange.bind(this)}>{this.state.text1?'Сайт для изучения английского языка. Средний уровень.':'Site for learning English. Midle level.'}</a></h5>
+</div>
+}
+}
   
 ReactDOM.render(<App />,  document.getElementById('root'));
 </script>
