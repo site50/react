@@ -9,40 +9,12 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <body>
-<div id="root1">
+<div id="root">
 </div>
 <script type="text/babel">
 	
-    class App extends React.Component {
-        render() {
-const style_href={
-
-         backgroundImage: "url(" + "https://github.com/site50/react/blob/master/beach.jpg" + ")",
-        backgroundSize: "cover",
-       	fontSize: "10vw",
-		fontWeight: "1000",
-		zIndex: "0",
-		MozBackgroundClip: "text",
-		MozTextFillColor: "transparent",
-		WebkitBackgroundClip: "text",
-		WebkitTextFillColor: "transparent",
-		
-}
-      
-          return <div id='showtext'>
-<h2>HELLO</h2>
-<a  className="box" style={style_href}	href="menu.html"> YOUR <br></br> ENGLISH</a>
-<Example/>
-</div>
-        }
-      }
-
-
-
-
-	
-
-ReactDOM.render(<App />,  document.getElementById('root1'));
+  
+ReactDOM.render(<App />,  document.getElementById('root'));
 </script>
 </body>
 </html>
